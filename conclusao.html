@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://stahe.github.io/pt-ef5cf-oct-2012/conclusao.html">
       
       
-        <link rel="prev" href="estudo-de-caso-com-o-firebird-21.html">
+        <link rel="prev" href="caso-de-estudo-com-o-firebird-21.html">
       
       
       
@@ -54,6 +54,8 @@
     
     
       <link rel="stylesheet" href="stylesheets/focus.css">
+    
+      <link rel="stylesheet" href="stylesheets/bidi.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -328,14 +330,14 @@
   
   
     <li class="md-nav__item">
-      <a href="o--um-estudo-de-caso.html" class="md-nav__link">
+      <a href="o--estudo-de-caso.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    2. O : Um Estudo de Caso
+    2. O : estudo de caso
   
 
     
@@ -436,14 +438,14 @@
   
   
     <li class="md-nav__item">
-      <a href="estudo-de-caso-com-postgresql-921.html" class="md-nav__link">
+      <a href="caso-de-estudo-com-o-postgresql-921.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    6. Estudo de caso com PostgreSQL 9.2.1
+    6. Caso de estudo com o PostgreSQL 9.2.1
   
 
     
@@ -463,14 +465,14 @@
   
   
     <li class="md-nav__item">
-      <a href="estudo-de-caso-com-o-firebird-21.html" class="md-nav__link">
+      <a href="caso-de-estudo-com-o-firebird-21.html" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    7. Estudo de caso com o Firebird 2.1
+    7. Caso de estudo com o Firebird 2.1
   
 
     
@@ -540,20 +542,20 @@
   
 
 
-<p><a id="refheading39831804107930"></a></p>
+<p><span id="refheading39831804107930" name="refheading39831804107930" class="odt-bookmark-anchor"></span></p>
 <h1 id="8-conclusao">8. <span style="color: #365f91">Conclusão</span></h1>
-<p><span style="color: #000000">Neste documento, explorámos primeiro o Entity Framework 5 Code First (EF 5). Em seguida, portámos a seguinte aplicação, que utilizava o ORM NHibernate:</span></p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005EA00000115D91908D8.png" width="680" height="124" style="display:inline-block; margin:4px;width:17.999cm;height:3.293cm;" class="odt-zoomable" data-zoom-src="images/10000000000005EA00000115D91908D8.png" /></td></tr></table>
+<p><span style="color: #000000">Neste documento, começámos por conhecer o Entity Framework 5 Code First (EF 5). Em seguida, portámos a seguinte aplicação que utilizava o ORM NHibernate:</span></p>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000005EA00000115D91908D8.png" width="680" height="124" style="display:inline-block; margin:4px;width:17.999cm;height:3.293cm;" class="odt-zoomable" data-zoom-src="images/10000000000005EA00000115D91908D8.png" /></td></tr></table>
 
 <p>para a seguinte arquitetura, que utiliza o ORM EF 5:</p>
-<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top;"><img src="images/10000000000005E50000011F327B2216.png" width="680" height="129" style="display:inline-block; margin:4px;width:17.999cm;height:3.424cm;" class="odt-zoomable" data-zoom-src="images/10000000000005E50000011F327B2216.png" /></td></tr></table>
+<table class="odt-table" style="border-collapse: collapse; width: 100%; margin-bottom: 1em;"><tr><td style="border: 1px solid #ddd; padding: 8px; vertical-align: top; text-align: left;"><img src="images/10000000000005E50000011F327B2216.png" width="680" height="129" style="display:inline-block; margin:4px;width:17.999cm;height:3.424cm;" class="odt-zoomable" data-zoom-src="images/10000000000005E50000011F327B2216.png" /></td></tr></table>
 
-<p>Construímos esta última arquitetura utilizando cinco SGBDs. Embora a portabilidade entre os SGBDs nem sempre fosse de 100%, foi, ainda assim, extremamente satisfatória. </p>
+<p>Construímos esta última arquitetura com cinco SGBD. Embora a portabilidade entre o SGBD nem sempre tenha sido de 100 %, foi, no entanto, extremamente satisfatória. </p>
 <p>Aprendemos alguns princípios:</p>
 <ul>
-<li>todos os SGBDs estudados têm uma solução para gerar automaticamente valores de chave primária;</li>
-<li>para gerir o acesso simultâneo a entidades da base de dados, parece que uma coluna de inteiros incrementada automaticamente por triggers é uma solução aceite por todos;</li>
-<li>quando no modo Lazy Loading, é importante que as entidades encapsulem os valores de chave estrangeira a elas associados. Isto permite então que as dependências da entidade sejam recuperadas da base de dados.</li>
+<li>todos os SGBD analisados dispõem de uma solução para gerar automaticamente os valores das chaves primárias;</li>
+<li>para gerir a concorrência no acesso às entidades na base de dados, parece que uma coluna do tipo inteiro, incrementada automaticamente por triggers, é uma solução aceite por todos;</li>
+<li>quando se está no modo Lazy Loading, é importante que as entidades encapsulem os valores das chaves estrangeiras que lhes estão associadas. Isto permite, posteriormente, ir buscar à base de dados as dependências da entidade.</li>
 </ul>
 
 
